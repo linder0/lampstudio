@@ -19,15 +19,15 @@ export default function LampImage({ image, className = '' }: LampImageProps) {
       <img
         src={image.off}
         alt={image.alt}
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ opacity: isLampOn ? 0 : 1, transition: 'opacity 0.8s ease-in-out' }}
+        className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105"
+        style={{ opacity: isLampOn ? 0 : 1 }}
       />
       {/* ON image - top layer */}
       <img
         src={image.on}
         alt={image.alt}
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ opacity: isLampOn ? 1 : 0, transition: 'opacity 0.8s ease-in-out' }}
+        className="absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105"
+        style={{ opacity: isLampOn ? 1 : 0 }}
       />
     </div>
   )

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import TeamMember from '../components/TeamMember'
 import type { TeamMemberData } from '../components/TeamMember'
+import { fadeIn, defaultTransition } from '../utils/animations'
 
 const teamMembers: TeamMemberData[] = [
   {
@@ -30,9 +31,10 @@ export default function Team() {
     <div>
       {/* Header */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        variants={fadeIn}
+        initial="initial"
+        animate="animate"
+        transition={defaultTransition}
         className="mb-8 pb-4 border-b border-burgundy/20"
       >
         <h1 className="font-serif text-4xl text-ink mb-4">The Team</h1>

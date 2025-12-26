@@ -53,7 +53,7 @@ export default function ProjectDetail() {
           {project.images.map((image, index) => (
             <motion.div
               key={index}
-              variants={fadeInUp}
+              variants={fadeIn}
               initial="initial"
               animate="animate"
               transition={staggeredTransition(index)}

@@ -1,18 +1,21 @@
 import { motion } from 'framer-motion'
+import { fadeIn, defaultTransition, staggeredTransition } from '../utils/animations'
 
 export default function Thesis() {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
+      variants={fadeIn}
+      initial="initial"
+      animate="animate"
+      transition={defaultTransition}
       className="max-w-3xl mx-auto"
     >
       {/* Header */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        variants={fadeIn}
+        initial="initial"
+        animate="animate"
+        transition={defaultTransition}
         className="mb-16 text-center"
       >
         <h1 className="font-serif text-5xl md:text-6xl text-ink mb-6 italic">
@@ -23,9 +26,10 @@ export default function Thesis() {
 
       {/* Content */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        variants={fadeIn}
+        initial="initial"
+        animate="animate"
+        transition={staggeredTransition(0, 0.2)}
         className="space-y-8 text-lg leading-relaxed text-burgundy"
       >
         <p className="font-serif text-2xl text-ink leading-relaxed">

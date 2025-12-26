@@ -36,6 +36,8 @@ export default function Layout({ children }: LayoutProps) {
 
   const currentPageTitle = pageTitles[location.pathname] || ''
 
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
+
   return (
     <div
       className="min-h-screen flex flex-col"
@@ -68,6 +70,7 @@ export default function Layout({ children }: LayoutProps) {
             <div className="flex items-center gap-3">
               <Link
                 to="/"
+                onClick={scrollToTop}
                 className={`font-serif font-medium text-ink hover:text-burgundy transition-all duration-300 ${isScrolled ? 'text-lg' : 'text-xl'}`}
               >
                 Lamp Collective
@@ -122,6 +125,7 @@ export default function Layout({ children }: LayoutProps) {
             <div className="flex flex-col gap-2">
               <Link
                 to="/"
+                onClick={scrollToTop}
                 className="font-serif text-lg font-medium text-ink hover:text-burgundy transition-colors"
               >
                 Lamp Collective

@@ -9,16 +9,9 @@ export default function Gallery() {
   return (
     <div>
       {/* Page Header */}
-      <div className="pb-4 mb-8 border-b border-burgundy/20">
-        <h1 className="font-serif text-4xl text-ink mb-4">All Projects</h1>
-        <div className="flex items-end justify-between">
-          <p className="text-burgundy-light max-w-2xl leading-relaxed">
-            A collection of lighting objects exploring the interplay of form, material,
-            and illumination. Each piece is designed to transform both spaces and the
-            moments within them.
-          </p>
-          <ViewSizer value={viewSize} onChange={setViewSize} />
-        </div>
+      <div className="pb-4 mb-8 border-b border-burgundy/20 flex items-center justify-between">
+        <h1 className="font-serif text-4xl text-ink">All Projects</h1>
+        <ViewSizer value={viewSize} onChange={setViewSize} />
       </div>
 
       <ProjectGrid projects={projects} viewSize={viewSize} />
